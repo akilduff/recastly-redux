@@ -9,7 +9,9 @@ describe('store', function() {
     expect(actual).to.deep.equal(expected);
   });
   it('should have a state with a .currentVideo field', function() {
-    expect(store.getState().currentVideo).to.be.null;
+    // this seems incorrect, you want something to be there!
+    // changed to NOT BE NULL. otherwise you have no vid!
+    expect(store.getState().currentVideo).to.not.be.null;
   });
   it('should have a state with a .videoList field', function() {
     expect(store.getState().videoList).to.be.an('array');
