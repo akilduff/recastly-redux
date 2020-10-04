@@ -10,11 +10,10 @@ var currentVideoReducer = (state, action) => {
     const newCurrentVideo = action.video;
     newState.currentVideo = newCurrentVideo;
 
-    // output: a new state
     return newState.currentVideo;
-    // NOT THE WHOLE STATE, just current video
+
   } else {
-    return state
+    return state;
   }
 };
 

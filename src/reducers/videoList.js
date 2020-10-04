@@ -1,7 +1,6 @@
 import Redux from 'redux';
 
 var videoListReducer = (state, action) => {
-  // Why would there be state = sampleData?
 
   const initialState = {
     currentVideo: null,
@@ -16,10 +15,9 @@ var videoListReducer = (state, action) => {
     const newVideoList = action.videos;
     newState.videoList = newVideoList;
 
-    // output: a new state
     return newState.videoList;
   } else {
-    return initialState.videoList
+    return initialState.videoList;
   }
 };
 
